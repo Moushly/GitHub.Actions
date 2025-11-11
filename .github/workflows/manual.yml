@@ -11,6 +11,12 @@ on:
         description: 'Age'
         type: number
         required: true
+      gender:
+        description: 'Gender'
+        type: choice
+        options:
+          - Male
+          - Female
 
 jobs:
   manual:
@@ -21,4 +27,7 @@ jobs:
         run: echo "${{ inputs.name }}"  
 
       - name: Age
-        run: echo "${{ inputs.age }}"  
+        run: echo "${{ inputs.age }}"
+
+      - name: Gender
+        run: echo "${{ inputs.gender }}"  
